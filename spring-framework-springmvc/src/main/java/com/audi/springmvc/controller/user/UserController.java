@@ -24,7 +24,7 @@ public class UserController {
 	public List<User> findUsersByName(HttpServletRequest request, Model model) {
 		System.out.println("findUsersByName");
 		try {
-			return userService.findUsersByName("444444444444");
+			return userService.findUsersByName("坎坎坷坷");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> findUsersByName(String name) throws Exception {
-		return userDao.findUsersByName(name);
+		return userDao.findUsersByName('%'+name+'%');
 	}
 
 }

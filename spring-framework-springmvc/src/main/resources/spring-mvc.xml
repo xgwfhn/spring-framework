@@ -37,7 +37,7 @@
 	</context:component-scan>
 	<!-- @Controller注解的使用前提配置。要添加否则controller不能访问 -->	
 	<mvc:annotation-driven />
-	 <!-- 自动扫描并注入Spring Data JPA -->  
+	 <!-- 自动扫描并注入Spring Data JPA  ,此处表示com.audi.springmvc.repository包内所有的接口都由spring data jpa注入并生成实例-->  
     <jpa:repositories base-package="com.audi.springmvc.repository"  
         entity-manager-factory-ref="entityManagerFactory"  
         transaction-manager-ref="transactionManager" />  
