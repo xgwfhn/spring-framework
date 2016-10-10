@@ -1,0 +1,5 @@
+* 参考
+http://blog.csdn.net/tajun77/article/details/50405449
+http://blog.csdn.net/lipei1220/article/details/52152430
+springmvc4+spring data jpa 整合配置
+http://weir2009.iteye.com/blog/2117234
