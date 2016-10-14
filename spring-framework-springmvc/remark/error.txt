@@ -1,2 +1,5 @@
 *java.lang.IllegalArgumentException: No converter found for return value of type: class java.util.ArrayList
  http://www.cnblogs.com/hafiz/p/5812873.html
+ 
+ *java.lang.NoSuchMethodError: javax.persistence.EntityManager.createStoredProcedureQuery(Ljava/lang/String;)Ljavax/persistence/StoredProcedureQuery;
+ 

@@ -24,5 +24,6 @@
   </dependencies>
   <modules>
  	 <module>spring-framework-springmvc</module>
+ 	 <module>spring-framework-freemarker</module>
   </modules>
 </project>

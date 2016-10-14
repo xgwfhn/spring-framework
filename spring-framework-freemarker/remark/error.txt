@@ -1,0 +1,3 @@
+
+springmvc整合定时器  启动报java.lang.ClassNotFoundException: org.springframework.scheduling.quartz.CronTriggerBean
+http://www.cnblogs.com/interdrp/p/3587221.html

@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.audi.springmvc.model.User;
 import com.audi.springmvc.repository.UserDao;
+import com.audi.springmvc.repository.UserDaoPro;
 import com.audi.springmvc.service.UserService;
 
 
@@ -53,6 +54,9 @@ public class UserTest extends AbstractJUnit4SpringContextTests {
 	
 	@Resource
     private UserDao userDao;
+	
+	@Resource
+	private UserDaoPro  userDaoPro;
     
     @Test
     public void saveTest() { 
@@ -68,9 +72,31 @@ public class UserTest extends AbstractJUnit4SpringContextTests {
     }
     
     @Test
-    public void findUsersByName() { 
+    public void findUsersByName() { //模糊查询
     	try {
 			List<User> list=userDao.findUsersByName("444444444444");
+			System.out.println(list.size());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    @Test
+    public void findUsersByNameBySql() { //sql查询
+    	try {
+			List<User> list=userDao.findUsersByNameBysql("%444444444444%");
+			System.out.println(list.size());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    @Test
+    public void findUsersByNameByPro() { //存储过程查询
+    	try {
+			List<User> list=userDaoPro.findUsersByNameByPro("yyy");
 			System.out.println(list.size());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

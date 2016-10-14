@@ -26,15 +26,18 @@
 	<!-- 过滤静态资源不经过springmvc  ,使其可以直接访问 -->
 	<!-- 
 	<mvc:resources mapping="/style/**" location="/style/"></mvc:resources>
+	
 	 -->
-	<mvc:interceptors>    
-	    <mvc:interceptor>    
-	        <!-- 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller -->  
-	        <mvc:mapping path="/user/**" />  
-	        <bean class="com.audi.springmvc.util.LoginInterceptor"></bean>    
-	    </mvc:interceptor>  
-    <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->  
-	</mvc:interceptors>  
+	<mvc:resources mapping="/style/**" location="/style/"></mvc:resources>
+	<mvc:resources mapping="/script/**" location="/script/"></mvc:resources>
+	<!--freemarker视图解释器 -->  
+	<bean id="viewResolver"  
+	      class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">  
+	    <property name="suffix">  
+	        <value>.ftl</value>  
+	    </property>  
+	    <property name="contentType" value="text/html;charset=UTF-8"></property>  
+	</bean>  
 
      <!-- 配置自定扫描的包  扫描dao包  将带有@Repository的类纳入spring ioc管理 并实例化 -->
 	<context:component-scan base-package="com.audi.springmvc">
@@ -53,7 +56,7 @@
 	<!-- 配置视图解析器: 如何把 handler 方法返回值解析为实际的物理视图 -->  
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/pages/"></property>
-		<property name="suffix" value=".jsp"></property>
+		<property name="suffix" value=".html"></property>
 	</bean>
 	    
     <!-- c3p0数据源   此处ComboPooledDataSource数据源来源于c3p0-0.9.2.1.jar -->   

@@ -1,0 +1,14 @@
+高并发电子商务网站购物流程设计思路存在的问题
+http://bbs.csdn.net/topics/390607959
+当服务器需要很多时间去计算的时候，如何处理前后端交互的问题
+http://bbs.csdn.net/topics/391968372
+定时器参考 http://blog.csdn.net/asd987123456/article/details/49820165
+
+redis队列
+http://www.oschina.net/question/1475251_150177?sort=time
+http://shift-alt-ctrl.iteye.com/blog/1867454
+freemarker 缺点
+http://hell-liul.iteye.com/blog/487004
+
+Spring3.2异步处理http请求
+http://blog.csdn.net/dream8062/article/details/49465005
